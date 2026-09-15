@@ -1,0 +1,100 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Comic+Relief:wght@400;700&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
+
+:root{
+--color-primary: #FF6B2B;
+--color-bg: #FAFAFA;
+--color-surface: #FEFEFE;
+--color-surface-warm: #FFF7ED;
+--color-text-main: #18181B;
+--color-text-muted: #A1A1AA;
+--color-border: #E4E4E7;
+--color-dark-surface: #27272A;
+--color-dark-bg: #18181B;
+
+--p-1 : 10px;
+--p-2 : 16px;
+--p-3 : 22px;
+--p-4 : 32px;
+
+--m-1 : 10px;
+--m-2 : 16px;
+--m-3 : 22px;
+--m-4 : 32px;
+
+}
+
+body{
+   font-family: "Comic Relief", system-ui;
+}
+
+.logo{
+    color: var(--color-text-main);
+    font-size: 1.2rem;
+    font-weight: 900;
+}
+
+.logo span{
+    color: var(--color-primary);
+}
+
+.nav-bar a{
+ color: var(--color-text-muted);
+ position: relative;
+}
+
+.nav-bar a:hover{
+      color: var(--color-dark-surface);
+}
+
+.nav-bar a::after{
+ position: absolute;
+ background-color: var(--color-dark-surface);
+ content: "";
+ width: 0px;
+ height: 2px;
+ bottom: -2px;
+ left: 0;
+ border-radius : 100px;
+ transition: width 0.3s ease-in-out;
+}
+.nav-bar a:hover::after{
+     width: 100%;
+}
+
+
+
+.hire-me{
+  background-color: var(--color-primary);
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--color-surface);
+  position: relative;
+  overflow: hidden;
+}
+
+.hire-me span{
+    position: relative;
+    top: 1px;
+}
+
+.hire-me::after{
+    position: absolute;
+    content: "";
+    height: 100%;
+    width: 100%;
+    left: -100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+    transition: left 0.3s ease;
+}
+
+.hire-me:hover::after{
+    left: 100%;
+}
+
+
