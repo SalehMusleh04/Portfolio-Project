@@ -12,10 +12,11 @@
 --color-surface: #FEFEFE;
 --color-surface-warm: #FFF7ED;
 --color-text-main: #18181B;
---color-text-muted: #A1A1AA;
+--color-text-muted: #71718B;
 --color-border: #E4E4E7;
 --color-dark-surface: #27272A;
 --color-dark-bg: #18181B;
+--color-light-bg: #ffff;
 
 --p-1 : 10px;
 --p-2 : 16px;
@@ -27,6 +28,12 @@
 --m-3 : 22px;
 --m-4 : 32px;
 
+}
+
+
+header{
+    z-index: 5;
+    background-color: #FAFAFA;
 }
 
 body{
@@ -68,7 +75,6 @@ body{
 }
 
 
-
 .hire-me{
   background-color: var(--color-primary);
   font-size: 13px;
@@ -83,7 +89,7 @@ body{
     top: 1px;
 }
 
-.hire-me::after{
+.hire-me::after , .main-btns button:first-child::after{
     position: absolute;
     content: "";
     height: 100%;
@@ -93,8 +99,513 @@ body{
     transition: left 0.3s ease;
 }
 
-.hire-me:hover::after{
+.hire-me:hover::after , .main-btns button:first-child:hover::after{
     left: 100%;
 }
 
+.hero-section , .about-me-section{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: var(--p-2);
+}
 
+.f-article .for-work , .my-projects > p , .about-me{
+    text-transform: uppercase;
+    color: var(--color-primary);
+    letter-spacing: 2.5px;
+}
+
+.f-article h1{
+    font-weight: bold;
+    font-size: 45px;
+}
+
+.f-article h1 span{
+   color: var(--color-primary);
+}
+
+.f-article .my-major{
+    font-size: var(--m-3);
+    color: var(--color-text-muted);
+    width: 500px;
+}
+
+.f-article .my-major span{
+    color: var(--color-dark-bg);
+}
+
+.main-btns , .main-btns button{
+     position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 7px;
+}
+
+.main-btns button {
+    padding: var(--p-1) var(--p-2);
+    border-radius: var(--m-4);
+    border: none;
+    font-size: 14px;
+}
+
+.main-btns button:first-child{
+    background-color: var(--color-dark-bg);
+    color: #E4E4E7;
+    font-weight: 500;
+}
+
+.main-btns button:last-child{
+    background-color: var(--color-light-bg);
+    color: var(--color-dark-surface);
+    border: 1px solid var(--color-border);
+    transition:  background-color 0.3s ease-in-out;
+}
+
+.main-btns button:last-child:hover{
+    background-color: var(--color-bg);
+}
+
+.main-btns button span{
+    position: relative;
+    top: 1.6px;
+}
+
+.stats{
+    display: grid;
+    grid-template-areas: 
+    'numProjects numYears'
+    'projects years';
+     margin-top: var(--m-2);
+     justify-content: start;
+     column-gap: 20px;
+     line-height: 0.5;
+}
+
+.num-projects{
+   grid-area: numProjects;
+   font-weight: bold;
+}
+.num-years{
+   grid-area: numYears;
+   font-weight: bold;
+}
+.projects{
+   grid-area: projects;
+   font-size: 12px;
+   color: #71718B;
+}
+.years{
+   grid-area: years;
+   font-size: 12px;
+    color: #71718B;
+}
+
+.profile-img{
+    width : 350px;
+    height: 350px;
+    border-radius: 50%;
+    box-shadow: 0px 0px 8px black;
+    margin: var(--m-2);
+    overflow: hidden;
+    background-color: #27272A;
+    border: 2px solid var(--color-primary);
+}
+
+.profile-img img{
+    max-width: 100%;
+    object-fit: cover;
+}
+
+.my-projects{
+    background-color: var(--color-bg);
+    display: grid;
+    grid-template-columns: repeat(2,minmax(350px,1fr));
+    grid-template-rows: auto;
+    padding: 45px 100px;
+    column-gap: 20px;
+}
+.my-projects > p{
+    line-height: 0.2px;
+}
+
+.my-projects > h2{
+    font-size: 38px;
+    font-weight: bold;
+}
+
+.my-projects > p ,.my-projects > h2 {
+    grid-column: 1/4;
+}
+
+.my-projects > article{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    gap: 10px;
+    background-color: var(--color-light-bg);
+    border-radius: 18px;
+    padding: 0;
+    overflow: hidden;
+    margin-top: var(--m-2);
+    border : 1px solid transparent;
+    transition: all 0.3s ease-in-out;
+}
+
+.my-projects > article:hover{
+   border-color : var(--color-primary);
+   transform: translateY(-10px);
+}
+
+.my-projects > article img{
+    max-width: 100%;
+}
+
+.project-content{
+    padding: 20px;
+}
+
+.technologies{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.technologies p{
+    border-radius: 22px;
+    border: 1px solid var(--color-primary);
+    color: var(--color-primary);
+    font-size: 12px;
+    background-color: var(--color-surface-warm);
+    padding: 2px 14px;
+}
+
+.project-content > p{
+    color: var(--color-text-muted);
+    font-size: 14px;
+    white-space: pre-line;
+}
+
+.project-content a{
+    text-decoration: none;
+    color: var(--color-dark-bg);
+    font-size: 15px;
+}
+
+.project-content a{
+    position: relative;
+}
+
+ .project-content a::after{
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 1.5px;
+    background-color: var(--color-dark-bg);
+    top: 20px;
+    left: 0;
+    border-radius: 20px;
+    transition: width 0.3s ease;
+}
+
+ .project-content a:hover::after{
+    width: 100%;
+ }
+
+ .f-article h2{
+    font-weight: bold;
+    font-size: 38px;
+    width: 270px;
+ }
+
+ .about-me-p{
+    white-space: pre-line;
+    color: var(--color-text-muted);
+    width: 500px;
+ }
+
+   .stack-tools{
+    margin-top: 20px;
+   }
+
+ .stack-tools div:last-child{
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     margin-top: 20px;
+     gap: 10px;
+     flex-wrap: wrap;
+ }
+
+  .stack-tools p{
+    color: var(--color-dark-bg);
+    border-radius: 22px;
+    font-size: 12px;
+    padding: 5px 18px;
+    transition: all 0.3s ease;
+    border: 1px solid #27272a65;
+  }
+  
+  .stack-tools p:hover{
+    border: 1px solid var(--color-primary);
+  }
+
+  .contact-section{
+    background-color: #FAFAFA;
+    padding: 20px;
+  }
+
+  .contact-article{
+    background-color: #18181B;
+    border-radius: 10px;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 80px;
+  }
+
+  .left-side{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+  }
+
+  
+  .blur-circle{
+  position: absolute;
+  z-index: 1;
+  bottom: 18px;
+  left: 10%;
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  background: var(--color-primary);
+  filter: blur(60px);
+  opacity: 0.6;
+    }
+
+    .left-side .title{
+        text-transform: uppercase;
+        color: var(--color-primary);
+        letter-spacing: 1.6px;
+        font-size: 12px;
+        font-weight: 600;
+    }
+
+    .left-side h2{
+        font-size: 38px;
+        font-weight: bold;
+        width: 200px;
+    }
+
+    .left-side .paragraph{
+        color: #95949b;
+        white-space: pre-line;
+        
+    }
+
+    .gmail,
+    .linkedin,
+    .github{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        margin-top: 8px;
+        z-index: 3;
+    }
+
+    .sm > span{
+        width: 40px;
+        height: 40px;
+        border-radius: 8px;
+        padding: 2px;
+        background-color: #27272A;
+        text-align: center;
+        font-size: 18px;
+        text-decoration: none;
+    }
+
+    .sm a{
+        display: block;
+        text-decoration: none;
+        margin-top: 17px;
+        color: grey;
+        transition: all 0.3s ease-in;
+    }
+
+    .sm a:hover{
+        color: var(--color-light-bg);
+    }
+     
+    .icon{
+        position: relative;
+        top: 5px;
+        left: 1px;
+    }
+
+    .right-side{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .form-row{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .form-group{
+        display: flex;
+        flex-direction: column;
+        gap: 7px;
+    }
+
+    .form-group{
+        font-size: 14px;
+        color: var(--color-text-muted);
+        font-weight: 400;
+    }
+     
+     textarea{
+        resize: none;
+     }
+
+    .right-side input , textarea{
+        padding: 10px;
+        border-radius: 15px;
+        background-color: #27272A;
+        border: 1px solid #27272A;
+    }
+
+    .right-side input:focus , textarea:focus{
+        color: var(--color-light-bg);
+        outline: none;
+        border: 1px solid var(--color-primary);
+    }
+
+    .right-side input::placeholder , textarea::placeholder{
+        color: #ffffffb9;
+    }
+
+    .right-side button{
+        background-color: var(--color-primary);
+        color: var(--color-light-bg);
+        padding: 10px 20px;
+        border-radius: 15px;
+        border: none;
+        font-weight: 500;
+    }
+
+    footer{
+        padding: 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: #71718B;
+    }
+
+    @media (max-width: 992px) {
+
+  .hero-section , .about-me-section{
+    flex-direction: column-reverse;
+    text-align: center;
+    gap: 30px;
+  }
+
+  .f-article .my-major,
+  .about-me-p {
+    width: 100%;
+  }
+  
+  .main-btns {
+    justify-content: center;
+  }
+
+  .stats {
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+
+  .my-projects {
+    grid-template-columns: 1fr; 
+    padding: 40px 20px;
+  }
+
+  .my-projects > p, 
+  .my-projects > h2 {
+    grid-column: 1;
+    text-align: center;
+  }
+
+  .contact-article {
+    flex-direction: column;
+    gap: 40px;
+    padding: 40px 20px;
+  }
+
+  .left-side {
+    align-items: center;
+    text-align: center;
+  }
+
+  .left-side h2 {
+    width: 100%;
+  }
+}
+
+@media (max-width: 576px) {
+
+  header {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .profile-img {
+    width: 250px;
+    height: 250px;
+  }
+
+  .f-article h1 {
+    font-size: 32px;
+  }
+
+  .f-article .my-major {
+    font-size: 16px;
+  }
+
+  .main-btns {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .main-btns button {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .form-row {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .right-side input, 
+  textarea {
+    width: 100%;
+  }
+
+  footer {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+}

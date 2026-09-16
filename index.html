@@ -5,27 +5,250 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"/>
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
      <link rel="stylesheet" href="style.css">
     <title>Saleh Portfolio</title>
 </head>
 <body>
-    <header class="d-flex justify-content-around align-items-center p-3">
+    <header class="d-flex justify-content-around align-items-center p-3 position-sticky top-0">
         <div class="fw-bold logo">
             sa<span>leh</span>
         </div>
         <nav class="nav-bar">
             <ul class="d-flex justify-content-center align-items-center gap-4 list-unstyled m-1">
-                <li><a class="text-decoration-none" href="">Home</a></li>
-                <li><a class="text-decoration-none" href="">Work</a></li>
-                <li><a class="text-decoration-none" href="">About</a></li>
-                <li><a class="text-decoration-none" href="">Contact</a></li>
+                <li><a class="text-decoration-none" href="#hero-section">Home</a></li>
+                <li><a class="text-decoration-none" href="#my-projects">Projects</a></li>
+                <li><a class="text-decoration-none" href="#about-me">About</a></li>
+                <li><a class="text-decoration-none" href="#contact-section">Contact</a></li>
             </ul>
         </nav>
+        <a href="#contact-section" class="text-decoration-none">
         <div class="hire-section">
                 <button class="hire-me d-flex justify-content-center align-items-center px-3 py-1 rounded-5 border-0">Hire me<span class="material-symbols-outlined m-1 fs-6">
 arrow_right_alt
 </span></button>
-        </div>
+        </div></a>
     </header>
+    <main>
+        <section class="hero-section" id="hero-section">
+            <section>
+            <article class="f-article">
+                <p class="for-work">Available for work</p>
+                <h1>Hi, I'm <span>Saleh</span></h1>
+                 <p class="my-major">
+                    <span>Frontend web & Flutter Developer.</span> I Focusing on building responsive web experiences and intuitive mobile apps - fast,clean, and accessible.
+                 </p>
+            </article>
+             <article class="main-btns">
+                <a href="#my-projects" class="text-decoration-none"><button class="view-projects">View my Projects<span class="material-symbols-outlined">
+                 keyboard_arrow_down
+                 </span></button></a>
+                 <a href="./assets/cv/Saleh-CV.pdf" download="Saleh-CV.pdf" class="text-decoration-none"><button>Download CV <span class="material-symbols-outlined">
+arrow_downward_alt
+</span></button></a>
+             </article>
+             <div class="stats">
+                <h4 class="num-projects">5+</h4>
+                <p  class="projects">Projects done</p>
+                <h4 class="num-years">1y</h4>
+                <p  class="years">Experience</p>
+             </div>
+            </section>
+             <figure class="profile-img">
+                <img src="./assets/imgs/profile-img.jpeg" alt="Saleh-img">
+             </figure>
+        </section>
+
+        <section class="my-projects" id="my-projects">
+                 <p>Portfolio</p>
+                 <h2>My Projects</h2>
+                 <article class="youtube-page">
+                    <img src="./assets/imgs/youtube-page.png" alt="youtube">
+                    <div class="project-content">
+                        <div class="technologies">
+                            <p>HTML</p>
+                            <p>CSS</p>
+                        </div>
+                        <h3>
+                            Youtube - Home Page
+                        </h3>
+                        <p>
+                            This project is a pixel-accurate frontend clone of the core YouTube desktop interface. Developed using semantic HTML and custom CSS, the project focuses on recreating complex user interface structures, including a fixed responsive navigation bar, a collapsible sidebar drawer, category filter chips, and a responsive video feed grid.
+
+                            The layout utilizes CSS Flexbox for dynamic bar alignments and CSS Grid to handle multi-column video thumbnails seamlessly across different viewport sizes. 
+
+                            Interactive micro-animations, hover previews, and custom tooltips are incorporated to mimic real-world platform behaviors while maintaining clean, accessible code architecture.
+                        </p>
+                            <a href="https://github.com/SalehMusleh04/Youtube_HP" target="_blank">
+                                Source Code
+                            </a>
+                    </div>
+                    </article>
+                 <article>
+                    <img src="./assets/imgs/job-finder.jpg" alt="gradjob">
+                    <div class="project-content">
+                        <div class="technologies">
+                            <p>HTML</p>
+                            <p>CSS</p>
+                            <p>JS</p>
+                            <p>React.js</p>
+                            <p>Node.js</p>
+                            <p>React Native</p>
+                            <p>PostgreSQL</p>
+                        </div>
+                        <h3>
+                            GradJob - My Graduation Project
+                        </h3>
+                        <p>
+                            GradHire is an end-to-end career platform developed by a 4-developer engineering team as a graduation capstone project. Designed to bridge the gap between fresh graduates and the job market, the platform delivers tailored onboarding paths, automated ATS-compliant resume creation, and smart job aggregation with custom filtering criteria.
+
+                             The application integrates an intuitive React web frontend and a React Native mobile interface backed by Node.js, Express, and PostgreSQL. Leveraging Hugging Face models for AI-driven resume enhancement and intelligent job recommendations, GradHire transforms the hiring workflow into a structured, one-click application process built on clean, scalable architecture.
+                        </p>
+                            <a href="https://github.com/QX-Devs/job-finder" target="_blank">
+                                Source Code
+                            </a>
+                    </div>
+                    </article>
+                 <article>
+                    <img src="https://s3-figma-hubfile-images-production-cdn-cgi.figma.com/cdn-cgi/image/format=auto,quality=85,width=1600/hub/file/carousel/img/5c2dd049775555d2d4093e0c2dfeae5dce619d8d" alt="food-app">
+                    <div class="project-content">
+                        <div class="technologies">
+                            <p>Dart</p>
+                            <p>Flutter</p>
+                        </div>
+                        <h3>
+                            Food Delivery - Mobile App
+                        </h3>
+                        <p>
+                            cross-platform mobile food delivery application engineered to deliver a seamless culinary browsing and ordering experience. The app features structured multi-category food exploration, smooth menu item filtering, custom food customizer views, and responsive state handling for active shopping carts and favorite items. Built with modular component architecture, it emphasizes clean visual hierarchy, snappy micro-interactions, and fluid screen transitions to simulate an end-to-end commercial food ordering journey.
+                        </p>
+                            <a href="https://github.com/SalehMusleh04/Food-Delivery-App" target="_blank">
+                                Source Code
+                            </a>
+                    </div>
+                    </article>
+                </section>
+
+                <section class="about-me-section" id="about-me">
+                    <figure class="profile-img">
+                <img src="./assets/imgs/profile-img.jpeg" alt="Saleh-img">
+             </figure>
+
+            <section>
+            <article class="f-article">
+                <p class="about-me">About Me</p>
+                <h2>A bit about who I am</h1>
+                 <p class="about-me-p">
+                    I'm Saleh, a frontend developer and computer science graduate passionate about turning ideas into clean, functional digital products.I specialize in building responsive web interfaces and cross-platform mobile apps with a strong focus on clean code, seamless interactions, and performance.When I'm not writing code, I enjoy exploring new tech stacks and solving algorithmic challenges.
+                 </p>
+            </article>
+             <article class="stack-tools">
+                <div>STACK & TOOLS</div>
+                 <div>
+                    <p>HTML</p>
+                    <p>CSS</p>
+                    <p>JS</p>
+                    <p>DART</p>
+                    <p>REACT</p>
+                    <p>FLUTTER</p>
+                    <p>BOOTSTRAP</p>
+                 </div>
+             </article>
+            </section>       
+        </section>
+
+         <section class="contact-section" id="contact-section">
+                <article class="contact-article">
+                    <div class="left-side">
+                        <div class="blur-circle"></div>
+                        <p class="title">Get In Touch</p>
+                        <h2>Let's Work together</h2>
+                        <p class="paragraph">I'm open to frontend and mobile development opportunities,
+                        freelance projects, or full-time roles.
+                        Whether building a responsive web app from
+                        scratch, crafting an intuitive mobile interface, or refining 
+                        an existing codebase — let's connect.</p>
+                        <div class="gmail sm">
+                            <span>
+                                <span class="material-symbols-outlined icon">
+                                    mail
+                                </span>
+                            </span>
+                            <p><a href="mailto:saleh04.musleh@gmail.com">saleh04.musleh@gmail.com</a></p>
+                        </div>
+                        <div class="linkedin sm">
+                            <span>
+                                <i class="fa-brands fa-linkedin icon"></i>
+                            </span>
+                            <p><a href="https://linkedin.com/in/salehmusleh">Saleh Musleh</a></p>
+                        </div>
+                        <div class="github sm">
+                            <span>
+                                <i class="fa-brands fa-github icon"></i>
+                            </span>
+                            <p><a href="https://github.com/SalehMusleh04">SalehMusleh04</a></p>
+                        </div>
+                    </div>
+                    
+                      <form class="right-side">
+  <div class="form-row">
+    <div class="form-group">
+      <label for="user-name">Name *</label>
+      <input 
+        type="text" 
+        id="user-name" 
+        name="name" 
+        placeholder="Saleh Musleh" 
+        required 
+      />
+    </div>
+
+    <div class="form-group">
+      <label for="user-email">Email *</label>
+      <input 
+        type="email" 
+        id="user-email" 
+        name="email" 
+        placeholder="saleh@company.com" 
+        required 
+      />
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="user-subject">Subject</label>
+    <input 
+      type="text" 
+      id="user-subject" 
+      name="subject" 
+      placeholder="Project inquiry" 
+    />
+  </div>
+
+  <div class="form-group">
+    <label for="user-message">Message *</label>
+    <textarea 
+      id="user-message" 
+      name="message" 
+      rows="5" 
+      placeholder="Tell me about your project..." 
+      required
+    ></textarea>
+  </div>
+
+  <button type="submit" class="submit-btn">
+    Send message &rarr;
+  </button>
+</form>
+                </article>
+
+            </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; Saleh. All rights reserved. 2026</p>
+        <p>Built with HTML & CSS</p>
+    </footer>
 </body>
 </html>
