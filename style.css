@@ -1,10 +1,4 @@
-*{
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
-}
-
-@import url('https://fonts.googleapis.com/css2?family=Comic+Relief:wght@400;700&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
 
 :root{
 --color-primary: #FF6B2B;
@@ -30,6 +24,11 @@
 
 }
 
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
 
 header{
     z-index: 5;
@@ -37,17 +36,11 @@ header{
 }
 
 body{
-   font-family: "Comic Relief", system-ui;
+   font-family: "Quicksand", sans-serif;
 }
 
-.logo{
-    color: var(--color-text-main);
-    font-size: 1.2rem;
-    font-weight: 900;
-}
-
-.logo span{
-    color: var(--color-primary);
+.logo img{
+    width: 80px;
 }
 
 .nav-bar a{
@@ -108,6 +101,11 @@ body{
     justify-content: space-around;
     align-items: center;
     padding: var(--p-2);
+}
+
+
+.about-me-section{
+    background-color: var(--color-bg);
 }
 
 .f-article .for-work , .my-projects > p , .about-me{
@@ -220,15 +218,15 @@ body{
 }
 
 .my-projects{
-    background-color: var(--color-bg);
     display: grid;
-    grid-template-columns: repeat(2,minmax(350px,1fr));
+    grid-template-columns: repeat(2,minmax(auto-fit,1fr));
     grid-template-rows: auto;
     padding: 45px 100px;
     column-gap: 20px;
+    row-gap: 15px;
 }
 .my-projects > p{
-    line-height: 0.2px;
+    line-height: 0.1px;
 }
 
 .my-projects > h2{
@@ -261,6 +259,8 @@ body{
 
 .my-projects > article img{
     max-width: 100%;
+    height: 220px;
+    object-fit: cover;
 }
 
 .project-content{
@@ -380,15 +380,30 @@ body{
   
   .blur-circle{
   position: absolute;
-  z-index: 1;
   bottom: 18px;
-  left: 10%;
+  left: 110%;
   width: 110px;
   height: 110px;
   border-radius: 50%;
   background: var(--color-primary);
-  filter: blur(60px);
-  opacity: 0.6;
+  filter: blur(90px);
+  animation: blurCircle 5s ease-in-out infinite;
+  
+    }
+
+    @keyframes blurCircle {
+        0%{
+            transform: translateY(0);
+        }
+        50%{
+            transform: translateY(-110px);
+        }
+        75%{
+            transform: translateY(110px);
+        }
+        100%{ 
+            transform: translateY(0);
+        }
     }
 
     .left-side .title{
@@ -411,40 +426,37 @@ body{
         
     }
 
-    .gmail,
-    .linkedin,
-    .github{
+    .my-contact{
         display: flex;
         justify-content: center;
         align-items: center;
         gap: 10px;
-        margin-top: 8px;
-        z-index: 3;
+        padding-bottom: 15px;
     }
 
-    .sm > span{
+    .sm  a{
         width: 40px;
         height: 40px;
         border-radius: 8px;
         padding: 2px;
-        background-color: #27272A;
+        background-color: var(--color-dark-bg);
         text-align: center;
         font-size: 18px;
         text-decoration: none;
-    }
-
-    .sm a{
         display: block;
         text-decoration: none;
-        margin-top: 17px;
-        color: grey;
+        color: var(--color-light-bg);
         transition: all 0.3s ease-in;
     }
-
+    
     .sm a:hover{
-        color: var(--color-light-bg);
+        background-color: var(--color-primary);
     }
-     
+    
+    .gmail span{
+        margin-top: 1px;
+    }
+
     .icon{
         position: relative;
         top: 5px;
@@ -561,6 +573,10 @@ body{
   .left-side h2 {
     width: 100%;
   }
+
+  .f-article h2{
+    width: 100%;
+  }
 }
 
 @media (max-width: 576px) {
@@ -596,6 +612,10 @@ body{
   .form-row {
     flex-direction: column;
     gap: 20px;
+  }
+   
+  .blur-circle{
+    display: none;
   }
 
   .right-side input, 
