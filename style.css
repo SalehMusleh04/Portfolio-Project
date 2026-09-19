@@ -291,16 +291,25 @@ body{
 }
 
 .project-content a{
-    text-decoration: none;
-    color: var(--color-dark-bg);
-    font-size: 15px;
-}
-
-.project-content a{
     position: relative;
+    text-decoration: none;
+    color: var(--color-primary);
+    font-size: 12px;
+    font-weight: 600;
+    border-radius: 8px;
+    padding: 8px 10px;
+    border: 1.5px solid var(--color-primary);
+    transition: all 0.3s ease-in-out;
+    margin-top: auto;
 }
 
- .project-content a::after{
+.project-content a:hover{
+        background-color: var(--color-primary);
+        color: var(--color-bg);
+}
+
+
+ /* .project-content a::after{
     position: absolute;
     content: "";
     width: 0;
@@ -314,7 +323,7 @@ body{
 
  .project-content a:hover::after{
     width: 100%;
- }
+ } */
 
  .f-article h2{
     font-weight: bold;
