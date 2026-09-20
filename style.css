@@ -243,7 +243,7 @@ body{
     flex-direction: column;
     justify-content: start;
     gap: 10px;
-    background-color: var(--color-light-bg);
+    background-color: var(--color-bg);
     border-radius: 18px;
     padding: 0;
     overflow: hidden;
